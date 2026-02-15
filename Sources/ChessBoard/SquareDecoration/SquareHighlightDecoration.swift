@@ -20,7 +20,7 @@ public class HighlightSquareDecoration: SquareDecoration {
     
     var type: DecorationType
     
-    init(square: Square, type: DecorationType) {
+    public init(square: Square, type: DecorationType) {
         self.type = type
         super.init(square: square)
     }

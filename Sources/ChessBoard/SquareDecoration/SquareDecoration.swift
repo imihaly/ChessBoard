@@ -14,7 +14,7 @@ public class SquareDecoration: Identifiable {
     public var id = UUID()
     var square: Square
     
-    init(square: Square) {
+    public init(square: Square) {
         self.square = square
     }
 }

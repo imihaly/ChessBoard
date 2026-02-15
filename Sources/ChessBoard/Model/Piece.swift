@@ -30,5 +30,12 @@ public struct Piece: Identifiable, Codable
     public var type: PieceType
     public var color: PieceColor
     public var square: Square
+    
+    public init(id: UUID = UUID(), type: PieceType, color: PieceColor, square: Square) {
+        self.id = id
+        self.type = type
+        self.color = color
+        self.square = square
+    }
 }
 

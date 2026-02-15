@@ -9,7 +9,7 @@
 
 import Foundation
 
-enum File: Int, Codable, Hashable {
+public enum File: Int, Codable, Hashable {
     case _A = 0
     case _B = 1
     case _C = 2
@@ -24,7 +24,7 @@ enum File: Int, Codable, Hashable {
     }
 }
 
-enum Rank: Int, Codable, Hashable {
+public enum Rank: Int, Codable, Hashable {
     case _1 = 0
     case _2 = 1
     case _3 = 2
@@ -48,12 +48,12 @@ public struct Square : Equatable, Codable, Hashable {
     let file: File
     let rank: Rank
     
-    init(file: File, rank: Rank) {
+    public init(file: File, rank: Rank) {
         self.file = file
         self.rank = rank
     }
     
-    init?(x: Int, y: Int) {
+    public init?(x: Int, y: Int) {
         guard let file = File(rawValue: x), let rank = Rank(rawValue: y) else {
             return nil
         }
